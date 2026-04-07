@@ -51,7 +51,5 @@ It helps candidates understand how well their resume matches a job and how to im
 
 
 
-### 3.  Run the App
-streamlit run app.py
 
 
