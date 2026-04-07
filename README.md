@@ -62,7 +62,7 @@ ats-resume-expert/
 ### 1️.  Clone Repository
 
 ```bash
-git clone https://github.com/your-username/ats-resume-expert.git
+git clone https://github.com/Kashish708/ATS
 cd ats-resume-expert
 ```
 
