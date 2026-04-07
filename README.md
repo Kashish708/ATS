@@ -47,30 +47,9 @@ It helps candidates understand how well their resume matches a job and how to im
 
 ---
 
-##  Project Structure
-ats-resume-expert/
-│── app.py
-│── .env
-│── requirements.txt
-│── README.md
 
 
----
 
-##  Installation & Setup
-
-### 1️.  Clone Repository
-
-```bash
-git clone https://github.com/Kashish708/ATS
-cd ats-resume-expert
-```
-
-### 2.  Install Dependencies
-pip install -r requirements.txt
-
-### 3.  Setup Environment Variables
-GOOGLE_API_KEY=your_api_key_here
 
 ### 3.  Run the App
 streamlit run app.py
