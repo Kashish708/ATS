@@ -1,8 +1,3 @@
-# field to put my JD
-# upload pdf 
-# pdf to image ----> processing ----> google gemini pro
-# prompts template[multiple prompts]
-
 from dotenv import load_dotenv 
 
 load_dotenv()
@@ -24,12 +19,12 @@ def get_gemini_response(input,pdf_content,prompt):
 
 def input_pdf_setup(uploaded_file):
   if uploaded_file is not None:
-    ## Convert the pdf to image 
+    
     images = pdf2image.convert_from_bytes(uploaded_file.read())
 
     first_page = images[0]
 
-    #Convert to bytes 
+    
     img_byte_arr = io.BytesIO()
     first_page.save(img_byte_arr,format = 'JPEG')
     img_byte_arr = img_byte_arr.getvalue()
@@ -37,7 +32,7 @@ def input_pdf_setup(uploaded_file):
     pdf_parts=[
         {
             "mime_type": "image/jpeg",
-            "data": base64.b64encode(img_byte_arr).decode() # encode to base64
+            "data": base64.b64encode(img_byte_arr).decode() 
 
         }
     ]
@@ -46,7 +41,7 @@ def input_pdf_setup(uploaded_file):
   else:
      raise FileNotFoundError("No file uploaded")
   
-## Streamlit app
+
 
 st.set_page_config(page_title="ATS Resume Expert")
 st.header("ATS Tracking System")
@@ -58,7 +53,7 @@ if uploaded_file is not None:
 
 submit1= st.button("Tell Me About the Resume")
 
-#submit2 = st.button("How can I improve my skills")
+
 
 submit3 = st.button("Percentage match")
 
